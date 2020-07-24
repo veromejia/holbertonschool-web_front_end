@@ -278,5 +278,5 @@ a:active {
 }
 
 .footer{
-  pad: var(--footer-padding);
+  padding: var(--footer-padding);
 }
