@@ -239,7 +239,7 @@ a:active {
   color: var(--color-primary);
 }
 
-.section{
+.section {
   padding: var(--section-padding);
 }
 
@@ -248,14 +248,15 @@ a:active {
   padding: var(--section-header-padding);
 }
 
-.section-body{
+.section-body {
   padding: var(--section-body-padding);
 }
 
-.section-fotter{
+.section-footer {
   padding: var(--section-footer-padding);
   text-align: var(--section-footer-align);
 }
+
 .section-title {
   font-family: var(--font-family-title);
   font-size: var(--font-size-xx-large);
@@ -277,6 +278,6 @@ a:active {
   margin-right: auto;
 }
 
-.footer{
+.footer {
   padding: var(--footer-padding);
 }
