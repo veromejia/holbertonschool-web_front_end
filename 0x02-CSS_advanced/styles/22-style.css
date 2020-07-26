@@ -195,7 +195,7 @@ template {
   --nav-item-font-size: var(--font-size-medium);
   --nav-item-letter-spacing: 0.04rem;
   --nav-item-display: inline-block;
-  --nav-item-margin: 0 0 3rem;
+  --nav-item-margin: 0 0 3rem 0;
   --nav-item-link-hover: var(--color-primary);
   --section-tagline-margin: 0;
 }
@@ -260,7 +260,7 @@ a:active {
   padding: var(--section-body-padding);
 }
 
-.section-fotter {
+.section-footer {
   padding: var(--section-footer-padding);
   text-align: var(--section-footer-align);
 }
@@ -358,5 +358,5 @@ ul.row {
 [data-section-theme=“dark”] {
   --text-color: var(--color-white);
   --section-title-color: var(--color-white);
-  background: var(--color-black);
+  background-color: var(--color-black);
 }
