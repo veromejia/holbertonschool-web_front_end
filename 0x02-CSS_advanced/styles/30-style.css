@@ -525,6 +525,6 @@ ul.row {
   content: "";
 }
 
-.card-title .card-work:hover {
+.card-work:hover .card-title {
   opacity: 1;
 }
