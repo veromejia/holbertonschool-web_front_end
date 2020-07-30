@@ -1,0 +1,8 @@
+/*using nested declaration for html tags and classes:*/
+
+body{
+    color: #3d3d3d;
+    > .red{
+        color: #ff0000;
+    }
+}
