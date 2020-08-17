@@ -318,7 +318,7 @@ a:active {
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px){
+@media screen and (min-width: 481px) and (max-width: 767px) {
     html {
         font-size: 60%;
     }
@@ -641,14 +641,14 @@ ul.row {
 /* Section Latest news
       ============================= */
 
+.section-latest-news .row {
+    flex-direction: row-reverse;
+}
+
 @media screen and (max-width: 767px) {
     .section-latest-news .row {
         flex-direction: column;
     }
-}
-
-.section-latest-news .row {
-    flex-direction: row-reverse;
 }
 
 /* Section SERVICES
