@@ -1134,7 +1134,7 @@ input:required:valid:not(:placeholder-shown), textarea:valid:not(:placeholder-sh
         padding: 0 1.5rem;
     }
     .header .menu-icon {
-        display: block;
+        display: none;
     }
 }
 
