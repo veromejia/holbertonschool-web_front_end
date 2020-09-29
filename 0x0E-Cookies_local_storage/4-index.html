@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <div id="#form">
+        <h2>Login to the website</h2>
+        <input type="text" id="firstname" placeholder="Firstname">
+        <input type="email" id="email" placeholder="Email">
+        <button type="button" onclick="setCookies()" id="login-btn">Log me in</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script type="application/javascript">
+        function setCookies() {
+            Cookies.set("firstname", document.getElementById("firstname").value, { expires: 10 })
+            Cookies.set("email", document.getElementById("email").value, { expires: 10 })
+            showWelcomeMessageOrForm();
+        }
+
+        function showCookies() {
+            const p = document.createElement('p');
+            p.textContent = `Email: ${Cookies.get('email')} - Firstname: ${Cookies.get('firstname')}`;
+            document.querySelector('body').appendChild(p);
+        }
+
+        function showForm() {
+            document.getElementById("#form").style.display = "block";
+        }
+
+        function hideForm() {
+            document.getElementById("#form").style.display = "none";
+        }
+
+        function deleteCookiesAndShowForm() {
+            let h1 = document.getElementById("#h1");
+            h1.remove();
+            Cookies.remove("firstname");
+            Cookies.remove("email");
+            showForm();
+        }
+
+        function showWelcomeMessageOrForm() {
+            let fn = Cookies.get("firstname");
+            if (fn) {
+                hideForm();
+
+                let h1 = document.createElement("h1");
+                h1.innerText = `Welcome ${fn}`;
+                h1.setAttribute("id", "#h1");
+
+                let link = document.createElement("a");
+                link.innerText = "(logout)";
+                link.setAttribute("class", "logout");
+                link.setAttribute("onclick", "deleteCookiesAndShowForm()");
+
+                h1.appendChild(link);
+                document.body.appendChild(h1);
+
+            } else showForm();
+        }
+        showWelcomeMessageOrForm();
+
+    </script>
+</body>
+
+</html>
